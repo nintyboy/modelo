@@ -1,15 +1,20 @@
 {
   "expo": {
-    "name": "solito-blank",
-    "slug": "solito-blank",
+    "name": "modelo",
+    "slug": "modelo",
     "version": "1.0.0",
-    "scheme": "solito-blank",
+    "scheme": "modelo",
     "platforms": [
       "ios",
       "android"
     ],
     "ios": {
-      "bundleIdentifier": "com.solito.blank"
+      "bundleIdentifier": "io.andfriends.modelo"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "7e95f6d0-5145-4bba-aa65-e5e3d190cdcc"
+      }
     }
   }
 }

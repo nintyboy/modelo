@@ -65,3 +65,16 @@ yarn
 ```
 
 You can also install the native library inside of `packages/app` if you want to get autoimport for that package inside of the `app` folder. However, you need to be careful and install the _exact_ same version in both packages. If the versions mismatch at all, you'll potentially get terrible bugs. This is a classic monorepo issue. I use `lerna-update-wizard` to help with this (you don't need to use Lerna to use that lib).
+
+
+### Get live
+
+#### Next.js
+Easy just add your github to your vercel account et Volia. This will probably get more interesting as we move down the process.
+
+### Expo
+Attach your github to your expo from `apps/expo` run 
+```eas init --id {eas-id}```
+And change the details to match the needs in the 
+`apps/expo/app.json`
+Finally run `eas build --platform ios | android | all`
