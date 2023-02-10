@@ -1,36 +1,26 @@
+name: EAS Build
 on:
+  workflow_dispatch:
   push:
     branches:
-      - main
+      - master
 jobs:
-  publish:
-    name: EAS Update
+  build:
+    name: Install and build
     runs-on: ubuntu-latest
     steps:
-      - name: Check for EXPO_TOKEN
-        run: |
-          if [ -z "${{ secrets.EXPO_TOKEN }}" ]; then
-            echo "You must provide an EXPO_TOKEN secret linked to this project's Expo account in this repo's secrets. Learn more: https://docs.expo.dev/eas-update/github-actions"
-            exit 1
-          fi
-      - name: 🏗 Setup repo
-        uses: actions/checkout@v3
-
-      - name: 🏗 Setup Node
-        uses: actions/setup-node@v3
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
         with:
           node-version: 16.x
-          cache: yarn
-
-      - name: 🏗 Setup Expo
+          cache: npm
+      - name: Setup Expo and EAS
         uses: expo/expo-github-action@v7
         with:
-          expo-version: latest
+          expo-version: 5.x
           eas-version: latest
           token: ${{ secrets.EXPO_TOKEN }}
-
-      - name: 📦 Install dependencies
-        run: yarn install
-
-      - name: 🚀 Publish app
-        run: expo publish --non-interactive
+      - name: Install dependencies
+        run: npm ci
+      - name: Build on EAS
+        run: eas build --platform all --non-interactive
