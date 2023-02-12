@@ -1,39 +1,37 @@
- name: Deploy Branch Preview
-    needs: test
+name: Deploy Branch Preview
+
+on: [pull_request]
+
+jobs:
+  publish:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
+      - name: 🏗 Setup repo
+        uses: actions/checkout@v3
+
+      - name: 🏗 Setup Node
+        uses: actions/setup-node@v3
         with:
-          node-version: 12.x
-      - uses: expo/expo-github-action@v5
+          node-version: 16.x
+          cache: yarn
+
+      - name: 🏗 Setup Expo
+        uses: expo/expo-github-action@v7
         with:
-          expo-packager: npm
-          expo-username: ${{ secrets.EXPO_CLI_USERNAME }}
-          expo-password: ${{ secrets.EXPO_CLI_PASSWORD }}
-          expo-cache: true
-      - name: Cache Node Modules
+          expo-version: latest]
+          eas-version: latest
+          token: ${{ secrets.EXPO_TOKEN }}
+      
+       - name: Find Yarn cache
+         id: yarn-cache
+         run: echo "::set-output name=dir::$(yarn cache dir)"
+
+      - name: Restore cache
         uses: actions/cache@v2
-        env:
-          cache-name: cache-node-modules
         with:
-          path: ~/.npm
-          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-build-${{ env.cache-name }}-
-            ${{ runner.os }}-build-
-            ${{ runner.os }}-
-      - name: Install Packages
-        run: npm install
-      - name: Expo Publish Channel
-        run: expo publish --non-interactive --release-channel pr${{ github.event.number }}
-      - name: Add Comment To PR
-        uses: mshick/add-pr-comment@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          EXPO_PROJECT: "@justussoh/github-actions-expo-boiler-template" # Put in your own Expo project name here
-        with:
-          message: |
-            ## Application
-            ![Expo QR](https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=exp://exp.host/${{ env.EXPO_PROJECT }}?release-channel=pr${{ github.event.number }})
-            Published to https://exp.host/${{ env.EXPO_PROJECT }}?release-channel=pr${{ github.event.number }}
+          path: ${{ steps.yarn-cache.outputs.dir }}
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: ${{ runner.os }}-yarn-
+
+      - name: Install dependencies
+        run: yarn install --immutable
