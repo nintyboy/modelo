@@ -1,3 +1,4 @@
+name: Preview on PR
 on: [pull_request]
 jobs:
   publish:
