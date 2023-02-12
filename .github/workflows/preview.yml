@@ -1,5 +1,5 @@
 name: Create Preview
-on: [pull_request]
+on: pull_request
 jobs:
   preview: Create Preview
   runs-on: ubuntu-latest
