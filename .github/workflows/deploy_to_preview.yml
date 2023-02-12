@@ -22,9 +22,9 @@ jobs:
           eas-version: latest
           token: ${{ secrets.EXPO_TOKEN }}
       
-       - name: Find Yarn cache
-         id: yarn-cache
-         run: echo "::set-output name=dir::$(yarn cache dir)"
+      - name: Find Yarn cache
+        id: yarn-cache
+        run: echo "::set-output name=dir::$(yarn cache dir)"
 
       - name: Restore cache
         uses: actions/cache@v2
