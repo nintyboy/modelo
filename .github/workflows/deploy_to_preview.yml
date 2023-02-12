@@ -34,3 +34,11 @@ jobs:
 
       - name: Install dependencies
         run: yarn install --immutable
+
+      - name: 🚀 Build app
+        run:  expo publish --release-channel=pr-test --non-interactive
+      
+      - name: 💬 Comment preview
+        uses: expo/expo-github-action/preview-comment@v7
+        with:
+          channel: pr-test
