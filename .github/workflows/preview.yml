@@ -1,4 +1,4 @@
-name: Create Preview
+name: preview
 on: push
 
 jobs:
