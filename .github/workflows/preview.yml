@@ -1,5 +1,5 @@
 name: Create Preview
-on: pull_request
+on: push
 
 jobs:
   preview: Create Preview
