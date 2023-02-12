@@ -1,5 +1,4 @@
 name: Deploy Branch Preview
-
 on: [pull_request]
 
 jobs:
