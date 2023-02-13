@@ -9,6 +9,10 @@
       "ios": {
         "resourceClass": "m1-medium"
       },
+      "android": {
+        "buildType": "app-bundle",
+        "image": "latest"
+      },
       "channel": "development"
     },
     "preview": {
@@ -16,11 +20,29 @@
       "ios": {
         "resourceClass": "m1-medium"
       },
+      "android": {
+        "buildType": "app-bundle",
+        "image": "latest"
+      },
       "channel": "preview"
+    },
+    "staging": {
+      "ios": {
+        "resourceClass": "m1-medium"
+      },
+      "android": {
+        "buildType": "app-bundle",
+        "image": "latest"
+      },
+      "channel": "staging"
     },
     "production": {
       "ios": {
         "resourceClass": "m1-medium"
+      },
+      "android": {
+        "buildType": "app-bundle",
+        "image": "latest"
       },
       "channel": "production"
     }

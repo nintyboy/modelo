@@ -57,10 +57,10 @@ jobs:
       #   run: NODE_OPTIONS=--max-old-space-size=5120 EXPO_DEBUG=true STAGE=staging eas update --branch staging --message "Deploy to staging"
 
       - name: 🚀 Build [Staging] Android App on EAS
-        run: eas build --profile staging --platform android --non-interactive --no-wait --resource-class=large
+        run: eas build --profile staging --platform android --non-interactive --no-wait
 
       - name: 🚀 Build [Staging] iOS App on EAS
-        run: as build --profile staging --platform ios --non-interactive --no-wait --resource-class=m1-medium
+        run: as build --profile staging --platform ios --non-interactive --no-wait 
 
       - name: 💬 Comment preview
         uses: expo/expo-github-action/preview-comment@v7
