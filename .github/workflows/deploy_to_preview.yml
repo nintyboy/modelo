@@ -4,7 +4,7 @@ on:
     types: [opened, synchronize, reopened]
 
 jobs:
-  publish:
+  Deploy_to_preview:
     runs-on: ubuntu-latest
     defaults:
       run:
