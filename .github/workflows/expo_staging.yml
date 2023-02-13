@@ -60,7 +60,7 @@ jobs:
       #   run: eas build --profile staging --platform android --non-interactive --no-wait
 
       - name: 🚀 Build [Staging] iOS App on EAS
-        run: as build --profile staging --platform ios --non-interactive --no-wait 
+        run: eas build --profile staging --platform ios --non-interactive --no-wait 
 
       - name: 💬 Comment preview
         uses: expo/expo-github-action/preview-comment@v7
