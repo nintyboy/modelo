@@ -1,5 +1,5 @@
 {
-  "name": "solito-blank",
+  "name": "modelo",
   "private": true,
   "workspaces": [
     "apps/*",
