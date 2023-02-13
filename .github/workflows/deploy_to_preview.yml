@@ -39,7 +39,7 @@ jobs:
         run: yarn install --immutable
 
       - name: 🚀 Build app
-        run:  eas update --channel=preview  --message="Preview build for ${{ github.sha }}" --platform=android,ios
+        run:  eas update --channel=preview  --message="Preview build for ${{ github.sha }}" --platform=all
       
       - name: 💬 Comment preview
         uses: expo/expo-github-action/preview-comment@v7
