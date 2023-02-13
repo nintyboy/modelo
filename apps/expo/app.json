@@ -19,6 +19,8 @@
     "updates": {
       "url": "https://u.expo.dev/7e95f6d0-5145-4bba-aa65-e5e3d190cdcc"
     },
-    "android": {}
+    "android": {
+      "package": "io.andfriends.modelo"
+    }
   }
 }
