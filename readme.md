@@ -75,6 +75,14 @@ Easy just add your github to your vercel account et Volia. This will probably ge
 ### Expo
 Attach your github to your expo from `apps/expo` run 
 ```eas init --id {eas-id}```
-And change the details to match the needs in the 
+
+#### Setup EAS update for Dev & Preview Builds
+In the `apps/expo` folder run: ``eas update:configure`` 
+to configure your build platform run ``eas build:configure``.
+
+Finally run ``eas update --branch preview --message "First Preview" ``
+This will setup up your first preview build in the cloud.
+
+<!-- And change the details to match the needs in the 
 `apps/expo/app.json`
-Finally run `eas build --platform ios | android | all`
+Finally run `eas build --platform ios | android | all` -->
