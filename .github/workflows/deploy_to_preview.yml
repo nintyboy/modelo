@@ -4,6 +4,9 @@ on: push
 jobs:
   publish:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./apps/expo
     steps:
       - name: 🏗 Setup repo
         uses: actions/checkout@v3
