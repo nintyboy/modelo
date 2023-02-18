@@ -3,6 +3,21 @@
     "build": {
       "dependsOn": ["^build"],
       "outputs": [".next/**"]
+    },
+    "dev:ios-build":{
+      "cache" : false
+    },
+    "dev":{
+      "cache": false
+    },
+    "dev:android-build": {
+      "cache": false
+    },
+    "start:ios": {
+      "cache": false
+    },
+    "start:android": {
+      "cache": false
     }
   }
 }
