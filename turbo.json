@@ -16,6 +16,9 @@
     "start:ios": {
       "cache": false
     },
+    "start:ios:device": {
+      "cache": false
+    },
     "start:android": {
       "cache": false
     }
