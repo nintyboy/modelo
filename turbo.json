@@ -5,22 +5,28 @@
       "outputs": [".next/**"]
     },
     "dev:ios-build":{
-      "cache" : false
+      "cache" : false,
+      "outputMode": "full"
     },
     "dev":{
-      "cache": false
+      "cache": false,
+      "outputMode": "full"
     },
     "dev:android-build": {
-      "cache": false
+      "cache": false,
+      "outputMode": "full"
     },
     "start:ios": {
-      "cache": false
+      "cache": false,
+      "outputMode": "full"
     },
     "start:ios:device": {
-      "cache": false
+      "cache": false,
+      "outputMode": "full"
     },
     "start:android": {
-      "cache": false
+      "cache": false,
+      "outputMode": "full"
     }
   }
 }

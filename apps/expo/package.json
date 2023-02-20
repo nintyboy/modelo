@@ -25,16 +25,15 @@
     "typescript": "^4.6.3"
   },
   "scripts": {
-    "start:ios": "expo start --ios --dev-client",
+    "start": "expo start --dev-client",
     "start:ios:device": "eas build --profile development --platform ios && say done",
     "start:android": "expo start --android --dev-client",
     "android": "expo run:android",
     "ios": "expo run:ios",
-    
     "dev:ios-build": "yarn expo:prebuild && yarn ios",
     "dev:android-build": "yarn expo:prebuild && yarn android",
-    "expo:prebuild": "yarn expo prebuild --skip-dependency-update react && yarn react-native",
-    "start": "expo start --dev-client"
+    "expo:prebuild": "yarn expo prebuild --skip-dependency-update react && yarn react-native"
+
   },
   "private": true
 }
