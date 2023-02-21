@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "523999729926",
+    "project_id": "modelo-base-3233a",
+    "storage_bucket": "modelo-base-3233a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:523999729926:android:18ea6c550168a56472a687",
+        "android_client_info": {
+          "package_name": "io.andfriends.modelo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "523999729926-317eagecj3jbaqfq7i3n9vtiqcrae9tq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA7gYQH82CiLt_ZOuKlQ-mfHchIm7huvuQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "523999729926-317eagecj3jbaqfq7i3n9vtiqcrae9tq.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "523999729926-u163tpaefp14uurqcln65sfggqk8tv2t.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "io.andfriends.modelo"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>523999729926-u163tpaefp14uurqcln65sfggqk8tv2t.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.523999729926-u163tpaefp14uurqcln65sfggqk8tv2t</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDUoNemAw7itSV7FKcZ0q4KFWTn7hfgHxM</string>
+	<key>GCM_SENDER_ID</key>
+	<string>523999729926</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>io.andfriends.modelo</string>
+	<key>PROJECT_ID</key>
+	<string>modelo-base-3233a</string>
+	<key>STORAGE_BUCKET</key>
+	<string>modelo-base-3233a.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<true></true>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:523999729926:ios:d406c28c50a0335e72a687</string>
+</dict>
+</plist>
