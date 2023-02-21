@@ -2,8 +2,8 @@ import { Dripsy } from './dripsy'
 import { FirebaseAppShell } from './firebase/FirebaseAppShell'
 import { NavigationProvider } from './navigation'
 import config from './config';
-import { proc } from 'react-native-reanimated';
-import { FirebaseAnalyticsProvider } from './firebase/FirebaseAnalyticsProvider';
+import { FirebaseAnalyticsProvider } from './firebase/FirebaseAnalyticsProvider.web';
+
 
 export function Provider({ children }: { children: React.ReactNode }) {
   const {firebase} = config;
