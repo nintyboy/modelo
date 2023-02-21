@@ -1,4 +1,4 @@
-import type {FirebaseOptions} from 'firebase/app';
+import type { FirebaseOptions } from 'firebase/app';
 import { FirebaseAppProvider } from 'reactfire';
 
 function FirebaseAppShell({
@@ -14,4 +14,4 @@ function FirebaseAppShell({
   )
 }
 
-export {FirebaseAppShell}
+export { FirebaseAppShell }

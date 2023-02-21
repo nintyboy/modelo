@@ -19,10 +19,19 @@ function BrowserFirebaseAnalyticsProvider(props: React.PropsWithChildren){
 
   return (
     <AnalyticsProvider sdk={sdk}>
-      {props.children}
+      <AnalyticsTrackingEventsProvider>
+        {props.children}
+      </AnalyticsTrackingEventsProvider>
     </AnalyticsProvider>
-  )
+  );
 
+}
+
+function AnalyticsTrackingEventsProvider({
+  children
+}: React.PropsWithChildren){
+  useAnalyticsTracking();
+  return <>{children}</>
 }
 
 
