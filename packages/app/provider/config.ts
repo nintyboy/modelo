@@ -8,5 +8,9 @@ const config = {
     appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
     measurementId: process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID,
   },
+  environment: process.env.NEXT_PUBLIC_VERCEL_ENV ?? 'development',
+  emulatorHost: process.env.NEXT_PUBLIC_EMULATOR_HOST,
+  emulator: process.env.NEXT_PUBLIC_EMULATOR === 'true',
+  production: process.env.NODE_ENV === 'production',
 };
 export default config;

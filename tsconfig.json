@@ -1,5 +1,7 @@
 {
   "compilerOptions": {
+      "module": "ES2020",
+      "jsx": "preserve",
     "strictNullChecks": true,
     "noUncheckedIndexedAccess": true,
     "paths": {
@@ -14,4 +16,6 @@
     "**/*.tsx",
     ".next/types/**/*.ts"
   ],
+
+  
 }
