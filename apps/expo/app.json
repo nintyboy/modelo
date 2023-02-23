@@ -9,8 +9,24 @@
       "android"
     ],
     "ios": {
-      "bundleIdentifier": "io.andfriends.modelo"
+      "bundleIdentifier": "io.andfriends.modelo",
+      "googleServicesFile": "../../packages/firebase/config/GoogleService-Info.plist"
     },
+     "android": {
+      "package": "io.andfriends.modelo",
+      "googleServicesFile": "../../packages/firebase/config/google-services.json"
+    },
+    "plugins": [
+      [
+        "expo-build-properties", {
+          "ios": {
+            "useFrameworks": "static"
+          }
+        }
+      ],
+      "@react-native-firebase/app"
+      
+    ],
     "extra": {
       "eas": {
         "projectId": "7e95f6d0-5145-4bba-aa65-e5e3d190cdcc"
@@ -18,9 +34,6 @@
     },
     "updates": {
       "url": "https://u.expo.dev/7e95f6d0-5145-4bba-aa65-e5e3d190cdcc"
-    },
-    "android": {
-      "package": "io.andfriends.modelo"
     }
   }
 }

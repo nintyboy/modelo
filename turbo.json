@@ -3,6 +3,30 @@
     "build": {
       "dependsOn": ["^build"],
       "outputs": [".next/**"]
+    },
+    "dev:ios-build":{
+      "cache" : false,
+      "outputMode": "full"
+    },
+    "dev":{
+      "cache": false,
+      "outputMode": "full"
+    },
+    "dev:android-build": {
+      "cache": false,
+      "outputMode": "full"
+    },
+    "start:ios": {
+      "cache": false,
+      "outputMode": "full"
+    },
+    "start:ios:device": {
+      "cache": false,
+      "outputMode": "full"
+    },
+    "start:android": {
+      "cache": false,
+      "outputMode": "full"
     }
   }
 }

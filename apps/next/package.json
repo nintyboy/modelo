@@ -1,5 +1,5 @@
 {
-  "name": "next-app",
+  "name": "@modelo/next",
   "version": "0.1.0",
   "private": true,
   "engines": {
@@ -14,8 +14,10 @@
   "dependencies": {
     "@expo/next-adapter": "^4.0.12",
     "app": "*",
+    "firebase": "^9.17.1",
     "next": "13.0.1",
-    "raf": "^3.4.1"
+    "raf": "^3.4.1",
+    "reactfire": "^4.2.2"
   },
   "devDependencies": {
     "@types/node": "17.0.21",

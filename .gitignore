@@ -71,3 +71,8 @@ web-build/
 
 .turbo
 build/**
+
+#Firestore Config
+packages/app/firebase/config/google-services.json
+packages/app/firebase/config/GoogleService-Info.plist
+
