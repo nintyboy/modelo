@@ -1,12 +1,12 @@
-const { withExpo } = require('@expo/next-adapter')
-const withPlugins = require('next-compose-plugins')
+const { withExpo } = require('@expo/next-adapter');
+const withPlugins = require('next-compose-plugins');
 const withTM = require('next-transpile-modules')([
   'solito',
   'dripsy',
   '@dripsy/core',
   'moti',
   'app',
-])
+]);
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -21,7 +21,17 @@ const nextConfig = {
     forceSwcTransforms: true,
     swcPlugins: [[require.resolve('./plugins/swc_plugin_reanimated.wasm')]],
   },
-}
+  webpack: (config, options) => {
+    config.resolve.extensions = [
+      '.web.js',
+      '.web.jsx',
+      '.web.ts',
+      '.web.tsx',
+      ...(config.resolve?.extensions ?? []),
+    ];
+    return config;
+  },
+};
 
 module.exports = withPlugins(
   [
@@ -34,4 +44,4 @@ module.exports = withPlugins(
     ],
   ],
   nextConfig
-)
+);
