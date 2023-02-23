@@ -1,21 +1,10 @@
 {
   "compilerOptions": {
-      "module": "ES2020",
-      "jsx": "preserve",
     "strictNullChecks": true,
     "noUncheckedIndexedAccess": true,
     "paths": {
       "app/*": ["./packages/app/*"]
     }
   },
-  "extends": "expo/tsconfig.base",
-   "include": [
-    "@types/global.d.ts",
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx",
-    ".next/types/**/*.ts"
-  ],
-
-  
+  "extends": "expo/tsconfig.base"
 }
