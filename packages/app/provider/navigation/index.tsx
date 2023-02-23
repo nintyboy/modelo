@@ -3,7 +3,7 @@ import { LinkingOptions, NavigationContainer, useNavigationContainerRef } from '
 import { useMemo } from 'react'
 import analytics from  '@react-native-firebase/analytics'
 import { Platform } from 'react-native'
-import { linking } from './linking'
+import { linking } from 'app/provider/navigation/linking'
 
 
 function useLinkingConfig(
