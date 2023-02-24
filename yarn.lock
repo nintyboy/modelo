@@ -2453,11 +2453,6 @@
   resolved "https://registry.yarnpkg.com/@react-native-community/hooks/-/hooks-2.8.1.tgz#6e785431db49318048fdd14b601998437b6cc200"
   integrity sha512-DCmCIC0Gn9m6K0Mlg2MwNmTxMEpBu5lTLsI6b/XUAv/vLGa6o+X7RhCai4FWeqkjCU36+ZOwaLzDo4NBWMXaoQ==
 
-"@react-native-firebase/analytics@^17.3.1":
-  version "17.3.1"
-  resolved "https://registry.yarnpkg.com/@react-native-firebase/analytics/-/analytics-17.3.1.tgz#d41b73020c6a0d2cac7af5976121db1e40382418"
-  integrity sha512-HrxsBcJZk1MA7V6zFlYNl/8G0Er5gQm+ChD8kmvaReKWrN8HlvnrZpGa1dTJ/Bg6Z0dCaWE+3a/UJQ4Vt0qAPg==
-
 "@react-native-firebase/app@~15.4.0":
   version "15.4.0"
   resolved "https://registry.yarnpkg.com/@react-native-firebase/app/-/app-15.4.0.tgz#616a6d13956fbed1ee010ca05b9e62969d19b5c5"
