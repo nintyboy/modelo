@@ -1,8 +1,21 @@
 {
-  "pipeline": {
-    "build": {
-      "dependsOn": ["^build"],
-      "outputs": [".next/**"]
+    "pipeline": {
+        "build": {
+            "dependsOn": [
+                "^build"
+            ],
+            "outputs": [
+                ".next/**"
+            ]
+        },
+        "prebuild": {
+            "cache": false
+        },
+        "prebuild:ios": {
+            "cache": false
+        },
+        "prebuild:android": {
+            "cache": false
+        }
     }
-  }
 }
