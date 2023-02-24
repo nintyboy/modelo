@@ -71,3 +71,5 @@ web-build/
 
 .turbo
 build/**
+packages/firebase/config/google-services.json
+packages/firebase/config/GoogleService-Info.plist

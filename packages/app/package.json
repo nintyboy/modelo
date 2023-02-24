@@ -7,8 +7,10 @@
     "@react-navigation/native-stack": "^6.5.0",
     "dripsy": "^3.6.0",
     "expo-linking": "^3.0.0",
+    "firebase": "^9.17.1",
     "moti": "latest",
     "react-native-reanimated": "2.9.1",
+    "reactfire": "^4.2.2",
     "solito": "^2.0.0"
   },
   "sideEffects": false
