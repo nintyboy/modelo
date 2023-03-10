@@ -1,7 +1,9 @@
 {
   "compilerOptions": {
+    "experimentalDecorators": true,
     "strictNullChecks": true,
     "noUncheckedIndexedAccess": true,
+    "module": "ESNext",
     "paths": {
       "app/*": ["./packages/app/*"]
     }

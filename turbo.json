@@ -16,6 +16,9 @@
         },
         "prebuild:android": {
             "cache": false
+        },
+        "dev" : {
+            "cache":false
         }
     }
 }

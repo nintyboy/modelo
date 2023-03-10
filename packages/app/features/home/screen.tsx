@@ -1,6 +1,7 @@
 import { Text, useSx, View, H1, P, Row, A } from 'dripsy'
 import { TextLink } from 'solito/link'
 import { MotiLink } from 'solito/moti'
+import {inject, observer} from 'mobx-react'
 
 export function HomeScreen() {
   const sx = useSx()

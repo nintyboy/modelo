@@ -1,6 +1,6 @@
 import {AnalyticsProvider, useInitAnalytics} from 'reactfire';
 import config from '../config'
-import { useAnalyticsTracking } from 'app/hooks/use-analytics-tracking';
+// import { useAnalyticsTracking } from 'app/hooks/use-analytics-tracking';
 
 function FirebaseAnalyticsProvider({children}: React.PropsWithChildren){
   return <BrowserFirebaseAnalyticsProvider>{children}</BrowserFirebaseAnalyticsProvider>

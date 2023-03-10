@@ -8,6 +8,8 @@
     "dripsy": "^3.6.0",
     "expo-linking": "^3.0.0",
     "firebase": "^9.17.1",
+    "mobx": "^6.8.0",
+    "mobx-react": "^7.6.0",
     "moti": "latest",
     "react-native-reanimated": "2.9.1",
     "reactfire": "^4.2.2",
