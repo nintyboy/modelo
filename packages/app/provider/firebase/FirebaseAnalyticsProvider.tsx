@@ -1,9 +1,17 @@
 import {AnalyticsProvider, useInitAnalytics} from 'reactfire';
-import config from '../config'
-// import { useAnalyticsTracking } from 'app/hooks/use-analytics-tracking';
+import { isBrowser } from 'app/hooks/is-browser';
+import { useAnalyticsTracking } from 'app/hooks/use-analytics-tracking';
 
 function FirebaseAnalyticsProvider({children}: React.PropsWithChildren){
-  return <BrowserFirebaseAnalyticsProvider>{children}</BrowserFirebaseAnalyticsProvider>
+   if ( !isBrowser()) {
+     return <>{children}</>
+   }
+
+   return (
+     <BrowserFirebaseAnalyticsProvider>
+       {children}
+     </BrowserFirebaseAnalyticsProvider>
+   )
 
 }
 
@@ -19,10 +27,20 @@ function BrowserFirebaseAnalyticsProvider(props: React.PropsWithChildren){
 
   return (
     <AnalyticsProvider sdk={sdk}>
-      {props.children}
+      <AnalyticsTrackingEventsProvider>
+        {props.children}
+      </AnalyticsTrackingEventsProvider>
     </AnalyticsProvider>
   )
 
+}
+
+function AnalyticsTrackingEventsProvider({
+  children,
+}: React.PropsWithChildren) {
+  useAnalyticsTracking()
+
+  return <>{children}</>
 }
 
 
