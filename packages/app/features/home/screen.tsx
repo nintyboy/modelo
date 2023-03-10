@@ -2,9 +2,16 @@ import { Text, useSx, View, H1, P, Row, A } from 'dripsy'
 import { TextLink } from 'solito/link'
 import { MotiLink } from 'solito/moti'
 import {inject, observer} from 'mobx-react'
+import Constants from 'expo-constants'
+import config from 'app/provider/config'
+
+
 
 export function HomeScreen() {
   const sx = useSx()
+  console.log(config)
+  // console.log(Constants.manifest?.extra?.firebase)
+
 
   return (
     <View
