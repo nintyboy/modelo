@@ -14,6 +14,12 @@
   },
   "scripts": {
     "native": "cd apps/expo && expo start",
-    "web": "cd apps/next && yarn next"
+    "web": "cd apps/next && yarn next",
+    "run:next": "yarn turbo dev  --filter=@modelo/next",
+    "run:expo": "yarn workspace @modelo/expo start",
+    "prebuild:ios": "turbo run prebuild:ios --parallel --no-cache  --filter=@modelo/expo",
+    "prebuild:android": "turbo run prebuild:android --parallel --no-cache  --filter=@modelo/expo",
+    "prebuild": "turbo run prebuild --parallel --no-cache  --filter=@modelo/expo"
+    
   }
 }
