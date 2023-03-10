@@ -1,22 +1,20 @@
 import { Text, useSx, View, H1, P, Row, A } from 'dripsy'
 import { TextLink } from 'solito/link'
 import { MotiLink } from 'solito/moti'
+import Head from 'next/head'
 import {inject, observer} from 'mobx-react'
-import Constants from 'expo-constants'
-import config from 'app/provider/config'
-
 
 
 export function HomeScreen() {
   const sx = useSx()
-  console.log(config)
-  // console.log(Constants.manifest?.extra?.firebase)
-
 
   return (
     <View
       sx={{ flex: 1, justifyContent: 'center', alignItems: 'center', p: 16 }}
     >
+      <Head>
+        <title key={'title'}>Home</title>
+      </Head>
       <H1 sx={{ fontWeight: '800' }}>Welcome to Solito.</H1>
       <View sx={{ maxWidth: 600 }}>
         <P sx={{ textAlign: 'center' }}>
